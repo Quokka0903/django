@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>first</title>
+</head>
+<body>
+  <h3> catch! I catch {% if message %} {{message}} {% else %} nothing {% endif %}! </h3>
+  <form action="/third" method="GET">
+    <label for="message">and throw!</label>
+    <input type="text" id="message" name="message">
+    <label for="message2">twice!</label>
+    <input type="text" id="message2" name="message2">
+    <input type="submit" value="휙">
+  </form>
+
+</body>
+</html>
