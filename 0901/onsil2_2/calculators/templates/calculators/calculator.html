@@ -1,0 +1,10 @@
+<h1> 계산결과 </h1>
+
+<p> {{ val1 }} + {{ val2 }} = {{ val1|add:val2 }} </p>
+<p> {{ val1 }} * {{ val2 }} = {% widthratio val1 1 val2 %} </p>
+<p> {{ val1 }} - {{ val2 }} = {{ val1|add:val2_min }} </p>
+{% if flag %}
+  <p> 계산할 수 없습니다. </p>
+{% else %}
+  <p> {{ val1 }} / {{ val2 }} = {% widthratio val1 val2 1%} </p>
+{% endif %}

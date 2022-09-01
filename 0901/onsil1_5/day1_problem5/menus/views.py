@@ -1,3 +1,4 @@
+from datetime import datetime
 from django.shortcuts import render
 
 drinks = ["cider", "coke", "miranda", "fanta", "eye of finetree"]
