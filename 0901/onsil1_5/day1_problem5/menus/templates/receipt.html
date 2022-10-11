@@ -1,5 +1,15 @@
-{% if flag == 1 %}
-<p> {{ message|capfirst }} 주문받았습니다! </p>
+{% if dongjun == '1' %}
+    {% if res == '0' %}
+        <p> {{ message|capfirst }} 은/는 주문이 불가합니다. </p>
+    {% else %}
+        <p> {{ message|capfirst }} 주문받았습니다! </p>
+    {% endif %}
+
 {% else %}
-<p> {{ message|capfirst }} 은/는 주문이 불가합니다. </p>
+    {% if res == '1' %}
+        <p> {{ message|capfirst }} 은/는 주문이 불가합니다. </p>
+    {% else %}
+        <p> {{ message|capfirst }} 주문받았습니다! </p>
+    {% endif %}
+
 {% endif %}

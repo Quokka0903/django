@@ -8,6 +8,7 @@ foods = ["피자", "치킨", "국밥", "초밥", "민초흑당로제마라탕"]
 def food(request):
     context = {
         'food' : foods,
+        'dongjun' : '1',
     }
     return render(request, 'food.html', context)
 
@@ -15,19 +16,25 @@ def food(request):
 def drink(request):
     context = {
         'drink' : drinks,
+        'dongjun' : '0',
     }
     return render(request, 'drink.html', context)
 
 
 def receipt(request):
     message = request.GET.get('message').lower()
-    if message not in foods and message not in drinks:
-        flag = 0
-    else:
-        flag = 1
+    dongjun = request.GET.get('dongjun')
 
+    if message not in foods:
+        res = '0'
+    if message not in drinks:
+        res = '1'
+    
+    print('res')
+    print(res)
     context = {
         'message' : message,
-        'flag' : flag,
+        'dongjun' : dongjun,
+        'res' : res,
     }
     return render(request, 'receipt.html', context)
